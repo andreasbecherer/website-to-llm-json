@@ -52,7 +52,7 @@ Maintain the same spacing, typography hierarchy, and color balance."
 
 ---
 
-## ✨ Features (v3)
+## ✨ Features (v6)
 
 | Feature | Description |
 | --- | --- |

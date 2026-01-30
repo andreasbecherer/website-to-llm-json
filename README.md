@@ -27,7 +27,7 @@ You don't need to install anything. Just create a bookmark!
 
 1. Create a new bookmark in your browser bar.
 2. Name it **"💀 Skeletonize"**.
-3. Paste the contents of `skeletonizer.js` into the URL field.
+3. Paste the contents of `content.js` into the URL field.
 
 ---
 

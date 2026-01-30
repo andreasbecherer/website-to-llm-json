@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    @font-face {
+      font-family: 'Editorial';
+      src: local('Georgia');
+    }
+
+    body {
+      width: 320px;
+      background-color: rgb(255, 252, 245);
+      color: rgb(0, 66, 175);
+      font-family: 'Arial', sans-serif;
+      padding: 30px 20px;
+      text-align: center;
+      margin: 0;
+      overflow: hidden;
+    }
+
+    .header-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 30px;
+    }
+
+    .index-dot {
+      width: 8px;
+      height: 8px;
+      background-color: rgb(0, 66, 175);
+      border-radius: 50%;
+    }
+
+    .subtitle {
+      font-size: 10px;
+      letter-spacing: 2px;
+      font-weight: 400;
+      text-transform: uppercase;
+      color: rgba(0, 66, 175, 0.8);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    h1 {
+      font-family: 'Editorial', 'Georgia', serif;
+      font-size: 32px;
+      margin: 5px 0;
+      font-weight: 100;
+      letter-spacing: -0.5px;
+      color: rgb(0, 66, 175);
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 1.6;
+      margin-bottom: 35px;
+      color: rgba(0, 66, 175, 0.7);
+      font-weight: 300;
+      padding: 0 10px;
+    }
+
+    .btn-main {
+      background-color: transparent;
+      border: 1px solid rgb(0, 66, 175);
+      color: rgb(0, 66, 175);
+      padding: 16px 32px;
+      width: 100%;
+      font-size: 13px;
+      font-weight: 400;
+      border-radius: 40px;
+      cursor: pointer;
+      letter-spacing: 1px;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-main:hover {
+      background-color: rgb(0, 66, 175);
+      color: rgb(254, 241, 208);
+      transform: translateY(-1px);
+    }
+
+    .btn-main:active {
+      transform: translateY(0);
+      opacity: 0.9;
+    }
+
+    #status {
+      margin-top: 20px;
+      font-size: 11px;
+      letter-spacing: 0.5px;
+      min-height: 15px;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+
+    .footer {
+      margin-top: 40px;
+      font-size: 10px;
+      color: rgba(0, 66, 175, 0.5);
+      border-top: 0.5px solid rgba(9, 175, 0, 0.1);
+      padding-top: 15px;
+      letter-spacing: 0.5px;
+    }
+
+    a {
+      color: rgb(0, 66, 175);
+      text-decoration: none;
+      opacity: 0.8;
+      transition: opacity 0.2s;
+    }
+
+    a:hover {
+      opacity: 1;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="header-container">
+    <div class="subtitle">
+      <div class="index-dot"></div>
+      NOSTRARDI LABS
+      <div class="index-dot"></div>
+    </div>
+    <h1>Skeletonizer v6</h1>
+  </div>
+
+  <p>The ultimate JSON extractor for web layouts.<br>Built to power your next AI Vibe Coding session.</p>
+
+  <button id="scanBtn" class="btn-main">SCAN & DOWNLOAD JSON</button>
+
+  <div id="status"> </div>
+
+  <div class="footer">
+    <a href="https://github.com/deinname" target="_blank">View GitHub</a>
+  </div>
+  <script src="popup.js"></script>
+</body>
+
+</html>

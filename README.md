@@ -1,5 +1,7 @@
 # 💀 The Skeletonizer
 
+<img width="1404" height="1600" alt="TheSkeletonizer" src="https://github.com/user-attachments/assets/3bc01894-c596-4a02-a636-a84b7af324b7" />
+
 > Capture the Vibe of any website and feed it to your LLM.
 > 
 

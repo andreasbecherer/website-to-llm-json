@@ -3,143 +3,154 @@
 
 <head>
   <style>
-    @font-face {
-      font-family: 'Editorial';
-      src: local('Georgia');
-    }
+    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
 
     body {
-      width: 320px;
-      background-color: rgb(255, 252, 245);
-      color: rgb(0, 66, 175);
-      font-family: 'Arial', sans-serif;
-      padding: 30px 20px;
-      text-align: center;
+      width: 360px;
+      background: radial-gradient(circle at top left, #0D1B19, #050D0C);
+      color: #E0E0E0;
+      font-family: 'Outfit', sans-serif;
+      padding: 0;
       margin: 0;
       overflow: hidden;
     }
 
-    .header-container {
+    .container {
+      padding: 40px 32px;
       display: flex;
       flex-direction: column;
-      align-items: center;
+      gap: 32px;
+    }
+
+    .header {
+      display: flex;
+      flex-direction: column;
       gap: 12px;
-      margin-bottom: 30px;
     }
 
-    .index-dot {
-      width: 8px;
-      height: 8px;
-      background-color: rgb(0, 66, 175);
-      border-radius: 50%;
-    }
-
-    .subtitle {
-      font-size: 10px;
-      letter-spacing: 2px;
-      font-weight: 400;
+    .brand {
+      font-size: 11px;
+      letter-spacing: 2.5px;
+      font-weight: 600;
       text-transform: uppercase;
-      color: rgba(0, 66, 175, 0.8);
+      color: #8FE3A4;
       display: flex;
       align-items: center;
       gap: 8px;
     }
 
+    .brand-dot {
+      width: 5px;
+      height: 5px;
+      background-color: #8FE3A4;
+      border-radius: 50%;
+      box-shadow: 0 0 10px rgba(143, 227, 164, 0.4);
+    }
+
     h1 {
-      font-family: 'Editorial', 'Georgia', serif;
-      font-size: 32px;
-      margin: 5px 0;
-      font-weight: 100;
-      letter-spacing: -0.5px;
-      color: rgb(0, 66, 175);
+      font-size: 36px;
+      margin: 0;
+      font-weight: 400;
+      letter-spacing: -1.5px;
+      line-height: 1.05;
+      color: #FFFFFF;
     }
 
     p {
-      font-size: 14px;
+      font-size: 15px;
       line-height: 1.6;
-      margin-bottom: 35px;
-      color: rgba(0, 66, 175, 0.7);
+      margin: 0;
+      color: rgba(255, 255, 255, 0.5);
       font-weight: 300;
-      padding: 0 10px;
+      max-width: 260px;
+    }
+
+    .action-card {
+      background: rgba(143, 227, 164, 0.03);
+      border: 1px solid rgba(143, 227, 164, 0.08);
+      border-radius: 32px;
+      padding: 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
     }
 
     .btn-main {
-      background-color: transparent;
-      border: 1px solid rgb(0, 66, 175);
-      color: rgb(0, 66, 175);
-      padding: 16px 32px;
+      background: linear-gradient(135deg, #8FE3A4, #7BC990);
+      border: none;
+      color: #050D0C;
+      padding: 20px;
       width: 100%;
-      font-size: 13px;
-      font-weight: 400;
-      border-radius: 40px;
+      font-size: 14px;
+      font-weight: 600;
+      border-radius: 20px;
       cursor: pointer;
-      letter-spacing: 1px;
-      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-      position: relative;
-      overflow: hidden;
+      letter-spacing: 0.8px;
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      text-transform: uppercase;
+      box-shadow: 0 4px 15px rgba(143, 227, 164, 0.2);
     }
 
     .btn-main:hover {
-      background-color: rgb(0, 66, 175);
-      color: rgb(254, 241, 208);
-      transform: translateY(-1px);
+      background: linear-gradient(135deg, #A7EFB9, #8FE3A4);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(143, 227, 164, 0.3);
     }
 
     .btn-main:active {
-      transform: translateY(0);
-      opacity: 0.9;
+      transform: translateY(0) scale(0.98);
     }
 
     #status {
-      margin-top: 20px;
       font-size: 11px;
-      letter-spacing: 0.5px;
-      min-height: 15px;
+      letter-spacing: 1.5px;
       text-transform: uppercase;
-      font-weight: 500;
+      font-weight: 600;
+      color: rgba(143, 227, 164, 0.4);
+      text-align: center;
+      min-height: 14px;
     }
 
     .footer {
-      margin-top: 40px;
-      font-size: 10px;
-      color: rgba(0, 66, 175, 0.5);
-      border-top: 0.5px solid rgba(9, 175, 0, 0.1);
-      padding-top: 15px;
-      letter-spacing: 0.5px;
+      padding-top: 12px;
+      text-align: center;
     }
 
     a {
-      color: rgb(0, 66, 175);
+      font-size: 11px;
+      color: rgba(255, 255, 255, 0.25);
       text-decoration: none;
-      opacity: 0.8;
-      transition: opacity 0.2s;
+      transition: all 0.3s ease;
+      letter-spacing: 1px;
+      text-transform: uppercase;
     }
 
     a:hover {
-      opacity: 1;
-      text-decoration: underline;
+      color: #8FE3A4;
+      letter-spacing: 1.5px;
     }
   </style>
 </head>
 
 <body>
-  <div class="header-container">
-    <div class="subtitle">
-      <div class="index-dot"></div>
-      NOSTRARDI LABS
-      <div class="index-dot"></div>
+  <div class="container">
+    <div class="header">
+      <div class="brand">
+        <div class="brand-dot"></div>
+        Nostrardi Labs
+      </div>
+      <h1>Skeletonizer v6</h1>
+      <p>Beautifully structured data from any website.</p>
     </div>
-    <h1>Skeletonizer v6</h1>
-  </div>
 
-  <p>The ultimate JSON extractor for web layouts.<br>Built to power your next AI Vibe Coding session.</p>
+    <div class="action-card">
+      <button id="scanBtn" class="btn-main">Scan & Download</button>
+      <div id="status">Ready</div>
+    </div>
 
-  <button id="scanBtn" class="btn-main">SCAN & DOWNLOAD JSON</button>
-
-  <div id="status"> </div>
-
-  <div class="footer">
-    <a href="https://github.com/andreasbecherer/website-to-llm-json" target="_blank">View GitHub</a>
+    <div class="footer">
+      <a href="https://github.com/andreasbecherer/website-to-llm-json" target="_blank">View Docs</a>
+    </div>
   </div>
   <script src="popup.js"></script>
 </body>

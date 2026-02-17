@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function setStatus(msg, isError = false) {
     if (statusEl) {
       statusEl.textContent = msg;
-      statusEl.style.color = isError ? '#A11A1A' : 'rgba(0, 66, 175, 0.6)';
+      statusEl.style.color = isError ? '#FF6B6B' : 'rgba(143, 227, 164, 0.6)';
     }
   }
 
@@ -16,11 +16,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     btn.addEventListener('click', async () => {
       try {
-        setStatus('Requesting active tab...');
+        setStatus('Initializing...');
         const tabs = await chrome.tabs.query({ active: true, currentWindow: true });
         const tab = tabs && tabs[0];
         if (!tab) {
-          setStatus('No active tab found.', true);
+          setStatus('No active tab', true);
           return;
         }
 
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
             target: { tabId: tab.id },
             files: ['content.js']
           });
-          setStatus('Collecting data...');
+          setStatus('Analyzing...');
 
           async function fetchSkeletonData(attempts = 5, delay = 200) {
             for (let i = 0; i < attempts; i++) {
@@ -48,35 +48,40 @@ document.addEventListener('DOMContentLoaded', () => {
 
           const pageData = await fetchSkeletonData();
           if (!pageData) {
-            setStatus('No data found — page blocked?', true);
+            setStatus('Analysis failed', true);
             return;
           }
 
-          setStatus('Analysis complete');
+          setStatus('Complete');
         } catch (e) {
-          setStatus('Injection failed: ' + (e.message || e), true);
+          setStatus('Error: ' + (e.message || e), true);
           return;
         }
 
         const originalText = btn.innerText;
-        btn.innerText = 'ANALYZING...';
-        btn.style.backgroundColor = 'rgb(0, 66, 175)';
-        btn.style.color = 'rgb(255, 252, 245)';
+        btn.innerText = 'Analyzing...';
+        btn.style.background = 'rgba(143, 227, 164, 0.15)';
+        btn.style.color = '#8FE3A4';
+        btn.style.boxShadow = 'none';
 
         setTimeout(() => {
-          btn.innerText = 'DONE';
+          btn.innerText = 'Success';
+          btn.style.background = 'rgba(143, 227, 164, 0.8)';
+          btn.style.color = '#050D0C';
+
           setTimeout(() => {
             btn.innerText = originalText;
-            btn.style.backgroundColor = 'transparent';
-            btn.style.color = 'rgb(0, 66, 175)';
-            setStatus('Download successful');
-          }, 3000);
-        }, 1000);
+            btn.style.background = 'linear-gradient(135deg, #8FE3A4, #7BC990)';
+            btn.style.color = '#050D0C';
+            btn.style.boxShadow = '0 4px 15px rgba(143, 227, 164, 0.2)';
+            setStatus('Saved to JSON');
+          }, 4000);
+        }, 1200);
       } catch (err) {
-        setStatus('Error: ' + (err.message || err), true);
+        setStatus('Critical error', true);
       }
     });
   } catch (err) {
-    setStatus('Initialization failed: ' + (err.message || err), true);
+    setStatus('Init failed', true);
   }
 });

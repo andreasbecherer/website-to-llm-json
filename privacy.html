@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Skeletonizer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Outfit:wght@400;700&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --bg: #050D0C;
+            --text: #F0F4F3;
+            --accent: #8FE3A4;
+            --subtle: rgba(240, 244, 243, 0.6);
+            --border: rgba(143, 227, 164, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h1,
+        h2 {
+            font-family: 'Outfit', sans-serif;
+            color: var(--accent);
+            margin-bottom: 24px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            letter-spacing: -0.02em;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin-top: 40px;
+        }
+
+        p {
+            margin-bottom: 16px;
+            color: var(--subtle);
+        }
+
+        ul {
+            margin-bottom: 16px;
+            padding-left: 20px;
+            color: var(--subtle);
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .header {
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer {
+            margin-top: 80px;
+            padding-top: 40px;
+            border-top: 1px solid var(--border);
+            font-size: 0.9rem;
+            color: rgba(240, 244, 243, 0.4);
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Privacy Policy</h1>
+            <p>Last updated: February 17, 2026</p>
+        </header>
+
+        <section>
+            <h2>1. Introduction</h2>
+            <p>Skeletonizer ("we", "our", or "us") is dedicated to protecting your privacy. This Privacy Policy outlines
+                how we handle data within the Skeletonizer browser extension.</p>
+        </section>
+
+        <section>
+            <h2>2. Data Collection & Processing</h2>
+            <p>Skeletonizer is designed to be **privacy-first**. Here is how we handle your data:</p>
+            <ul>
+                <li><strong>Local Operation:</strong> All analysis and data extraction happen locally in your browser.
+                    No data is ever sent to our servers or any third-party servers.</li>
+                <li><strong>Website Content:</strong> The extension analyzes the active tab's structural layout and
+                    computed styles to generate a JSON "skeleton" of the page. This only happens when you explicitly
+                    trigger the "Scan" action.</li>
+                <li><strong>No Personal Information:</strong> We do not collect names, email addresses, IP addresses, or
+                    any other personally identifiable information (PII).</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>3. Permissions</h2>
+            <p>To function correctly, the extension requires the following permissions:</p>
+            <ul>
+                <li><strong>activeTab:</strong> Used to access the website you are currently viewing to perform the
+                    layout analysis.</li>
+                <li><strong>scripting:</strong> Used to execute the analysis logic on the page to extract the necessary
+                    structural data.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>4. Third-Party Services</h2>
+            <p>Skeletonizer does not use any third-party cookies, trackers, or analytics scripts. Your data stays on
+                your machine.</p>
+        </section>
+
+        <section>
+            <h2>5. Changes to This Policy</h2>
+            <p>We may update this Privacy Policy from time to time. Any changes will be posted on this page with an
+                updated "Last updated" date.</p>
+        </section>
+
+        <footer class="footer">
+            <p>&copy; 2026 Skeletonizer. Built for Vibe Coding.</p>
+            <p><a href="index.html">Return to Home</a></p>
+        </footer>
+    </div>
+</body>
+
+</html>

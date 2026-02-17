@@ -5,16 +5,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Skeletonizer - Capture the Vibe</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Outfit:wght@400;700&display=swap"
-        rel="stylesheet">
+    <!-- Link removed for GDPR compliance. Use system fonts or self-host fonts. -->
     <style>
         :root {
+            --font-main: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+            --font-display: 'Outfit', 'Inter', -apple-system, sans-serif;
+
             --bg: #050D0C;
             --text: #F0F4F3;
             --accent: #8FE3A4;
             --subtle: rgba(240, 244, 243, 0.6);
             --border: rgba(143, 227, 164, 0.1);
         }
+
+        /* To keep the exact look, download .woff2 files to /fonts/ and uncomment: */
+        /*
+        @font-face {
+            font-family: 'Inter';
+            src: url('fonts/inter-regular.woff2') format('woff2');
+            font-weight: 400;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'Outfit';
+            src: url('fonts/outfit-bold.woff2') format('woff2');
+            font-weight: 700;
+            font-display: swap;
+        }
+        */
 
         * {
             margin: 0;
@@ -25,7 +43,7 @@
         body {
             background: var(--bg);
             color: var(--text);
-            font-family: 'Inter', sans-serif;
+            font-family: var(--font-main);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -44,7 +62,7 @@
         }
 
         h1 {
-            font-family: 'Outfit', sans-serif;
+            font-family: var(--font-display);
             font-size: 3rem;
             color: var(--accent);
             margin-bottom: 20px;
@@ -97,7 +115,7 @@
         <h1>💀 Skeletonizer</h1>
         <p>Capture the Vibe of any website and feed it to your LLM. Lightweight, token-efficient, and 100% private.</p>
         <div class="links">
-            <a href="https://github.com/andreasbecherer/Skeletonizer_nostrardilabs" class="btn btn-secondary">GitHub
+            <a href="https://github.com/andreasbecherer/website-to-llm-json" class="btn btn-secondary">GitHub
                 Repository</a>
             <a href="privacy.html" class="btn btn-primary">Privacy Policy</a>
         </div>

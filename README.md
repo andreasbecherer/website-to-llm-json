@@ -1,13 +1,14 @@
 # 💀 The Skeletonizer
 
-<img width="1404" height="1600" alt="TheSkeletonizer" src="https://github.com/user-attachments/assets/3bc01894-c596-4a02-a636-a84b7af324b7" />
+<img width="960" height="600" alt="1" src="https://github.com/user-attachments/assets/23605f3a-9eb0-4b62-9683-7d79559e4249" />
+
 
 > Capture the Vibe of any website and feed it to your LLM.
 > 
 
 `The Skeletonizer` is a lightweight browser script that distills a website into a clean, token-efficient JSON structure. It strips away the noise (scripts, SVGs, base64 images) but keeps the **structure, classes, styling, and interactive elements**.
 
-You can find the chroe extension here: 
+You can find the chrome extension here: 
 
 Perfect for **"Vibe Coding"**.
 
@@ -21,7 +22,8 @@ When you want an AI to "recreate this design", pasting raw HTML is terrible:
 - ❌ **Confusing for AI:** Minified JS and SVG paths distract the model.
 - ✅ **Skeletonizer JSON:** Provides exactly what the LLM needs: Layout, Colors, Fonts, Spacing, and Component Hierarchy.
 
----
+<img width="960" height="600" alt="2" src="https://github.com/user-attachments/assets/ff7ac95a-061f-440a-867e-a8b6e3bb9a18" />
+
 
 ## 📦 Installation
 
@@ -63,7 +65,8 @@ Maintain the same spacing, typography hierarchy, and color balance."
 | **Style Extraction** | Grabs computed styles (Flexbox, Grid, Colors) but ignores defaults. |
 | **Privacy Friendly** | Runs entirely in your browser. No data sent to servers. |
 
----
+<img width="960" height="600" alt="4" src="https://github.com/user-attachments/assets/78a89e00-0e9e-49e2-aa0f-a160b7dc9c94" />
+
 
 ### License
 

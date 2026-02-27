@@ -8,7 +8,7 @@
 
 `The Skeletonizer` is a lightweight browser script that distills a website into a clean, token-efficient JSON structure. It strips away the noise (scripts, SVGs, base64 images) but keeps the **structure, classes, styling, and interactive elements**.
 
-You can find the chrome extension here: 
+You can find the chrome extension here: https://chromewebstore.google.com/detail/enjgomaaljedamhiphicalgimohilfmk?utm_source=item-share-cb
 
 Perfect for **"Vibe Coding"**.
 
